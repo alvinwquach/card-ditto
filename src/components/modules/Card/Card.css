@@ -1,0 +1,32 @@
+.card {
+    width: 135px;
+    height: 270px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: Arial, sans-serif;
+  }
+  
+  .card-rank {
+    font-size: 18px;
+  }
+  
+  .card-suit {
+    font-size: 18px;
+  }
+  
+  .inverted {
+    transform: rotate(180deg);
+  }
+  
