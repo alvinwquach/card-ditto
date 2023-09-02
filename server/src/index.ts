@@ -159,12 +159,9 @@ export const resolvers = {
         playerA,
         playerB,
         currentPlayerId,
-        deck: shuffleDeck,
+        deck: shuffledDeck,
         drawnCards: [],
       };
-
-      // Store the shuffled deck in the new game instance
-      newGame.deck = shuffledDeck;
 
       // Store the new game instance in the game state
       gameState[newGame.id] = newGame;
