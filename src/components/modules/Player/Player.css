@@ -1,60 +1,52 @@
 .player {
-    background-color: #222;
-    border: 2px solid #333;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
-    color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease-in-out;
-}
-
-.player.active {
-    background-color: #444;
-}
-
-.player-header {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .player.active {
+    background-color: #e0e0e0;
+  }
+  
+  .player-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 15px;
-}
-
-.player-header h2 {
+    margin-bottom: 10px;
+  }
+  
+  .player-header h2 {
     margin: 0;
-    font-size: 24px;
-    color: #ff9800;
-}
-
-.draw-button {
-    background-color: #ff5722;
+  }
+  
+  .draw-button {
+    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 5px 10px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.draw-button:hover {
-    background-color: #e64a19;
-}
-
-.drawn-cards-container {
+  }
+  
+  .draw-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .drawn-cards-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: rgba(255, 152, 0, 0.1);
-}
-
-.drawn-cards {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .drawn-cards {
     display: flex;
-    gap: 20px;
-    overflow: hidden;
-    touch-action: none;
-}
+    gap: 10px;
+    overflow: hidden; 
+    touch-action: none; 
+  }
