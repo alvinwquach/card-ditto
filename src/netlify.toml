@@ -1,0 +1,6 @@
+[build]
+  functions = "server"
+
+[[redirects]]
+  from = "/graphql"
+  to = "/.netlify/functions/server"
