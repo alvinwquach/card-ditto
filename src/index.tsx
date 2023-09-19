@@ -6,7 +6,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import reportWebVitals from "./reportWebVitals";
 
 const client = new ApolloClient({
-  uri: "https://cardditto.netlify.app/.netlify/functions/graphql",
+  uri: "https://cardditto.netlify.app/.netlify/functions/server",
   cache: new InMemoryCache(),
 });
 
