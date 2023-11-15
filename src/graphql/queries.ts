@@ -1,30 +1,29 @@
 import { gql } from "@apollo/client";
 
+const playerFragment = gql`
+  fragment PlayerFragment on Player {
+    id
+    name
+    drawnCards {
+      player
+      card {
+        suit
+        rank
+      }
+    }
+  }
+`;
+
 export const GET_GAME = gql`
+  ${playerFragment}
   query GetGame($gameId: ID!) {
     game(gameId: $gameId) {
       id
       playerA {
-        id
-        name
-        drawnCards {
-          player
-          card {
-            suit
-            rank
-          }
-        }
+        ...PlayerFragment
       }
       playerB {
-        id
-        name
-        drawnCards {
-          player
-          card {
-            suit
-            rank
-          }
-        }
+        ...PlayerFragment
       }
       currentPlayerId
       deck {
@@ -33,16 +32,10 @@ export const GET_GAME = gql`
       }
       draw
       winner
-      drawnCards {
-        player
-        card {
-          suit
-          rank
-        }
-      }
     }
   }
 `;
+
 
 export const GET_CURRENT_PLAYER_TURN = gql`
   query GetCurrentPlayerTurn($gameId: ID!) {

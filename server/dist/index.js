@@ -130,35 +130,35 @@ export const resolvers = {
     },
     Mutation: {
         createGame: (_, { playerAName, playerBName, selectedPlayer }) => {
-          // Create player objects for Player A and Player B
-          const playerA = { id: "A", name: playerAName, drawnCards: [] };
-          const playerB = { id: "B", name: playerBName, drawnCards: [] };
-          // Determine the current player's ID based on selection
-          const currentPlayerId = selectedPlayer === "A" ? "A" : "B";
-          // Generate and shuffle a new deck
-          const deck = generateDeck();
-          const shuffledDeck = shuffleDeck(deck);
-          // Generate a random ID for the new game
-          const randomId = uuidv4();
-          // Create a new game object with the required properties
-          // id
-          // Player A
-          // Player B
-          // Current Player ID
-          // Deck
-          // Drawn Cards
-          const newGame = {
-            id: randomId,
-            playerA,
-            playerB,
-            currentPlayerId,
-            deck: shuffledDeck,
-            drawnCards: [],
-          };
-          // Store the new game instance in the game state
-          gameState[newGame.id] = newGame;
-          // Return the new game state
-          return newGame;
+            // Create player objects for Player A and Player B
+            const playerA = { id: "A", name: playerAName, drawnCards: [] };
+            const playerB = { id: "B", name: playerBName, drawnCards: [] };
+            // Determine the current player's ID based on selection
+            const currentPlayerId = selectedPlayer === "A" ? "A" : "B";
+            // Generate and shuffle a new deck
+            const deck = generateDeck();
+            const shuffledDeck = shuffleDeck(deck);
+            // Generate a random ID for the new game
+            const randomId = uuidv4();
+            // Create a new game object with the required properties
+            // id
+            // Player A
+            // Player B
+            // Current Player ID
+            // Deck
+            // Drawn Cards
+            const newGame = {
+                id: randomId,
+                playerA,
+                playerB,
+                currentPlayerId,
+                deck: shuffledDeck,
+                drawnCards: [],
+            };
+            // Store the new game instance in the game state
+            gameState[newGame.id] = newGame;
+            // Return the new game state
+            return newGame;
         },
         drawCard: (_, { gameId, playerId }) => {
             const game = gameState[gameId];
@@ -203,7 +203,7 @@ export const resolvers = {
             // Initialize drawn card as an empty array
             // Initialize winner to null
             // Initalize draw to false
-            game.drawnCard = [];
+            game.drawnCards = [];
             game.currentPlayerId = game.playerA.id;
             game.winner = null;
             game.draw = false;
