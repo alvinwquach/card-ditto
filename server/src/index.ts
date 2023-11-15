@@ -216,7 +216,7 @@ export const resolvers = {
       // Initialize drawn card as an empty array
       // Initialize winner to null
       // Initalize draw to false
-      game.drawnCard = [];
+      game.drawnCards = [];
       game.currentPlayerId = game.playerA.id;
       game.winner = null;
       game.draw = false;
